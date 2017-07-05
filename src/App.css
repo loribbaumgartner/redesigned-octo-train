@@ -1,0 +1,29 @@
+/*
+white: #FDFFF7
+dk gray: #50514F
+background gray: #D7DEDC
+lt mint: #ACFCD9
+dk mint: #55D6BE
+lt yellow: #F9E907
+dk yellow: #CEVE12
+*/
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
