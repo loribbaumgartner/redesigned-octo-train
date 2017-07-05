@@ -8,22 +8,24 @@ lt yellow: #F9E907
 dk yellow: #CEVE12
 */
 
-.App {
+body, html {
   text-align: center;
+  background-color: #D7DEDC;
+  font-family: 'Raleway', sans-serif;
+  color: #50514F;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.list {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #FDFFF7;
   padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  border-radius: 2px;
 }
