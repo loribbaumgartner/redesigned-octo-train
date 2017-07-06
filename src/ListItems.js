@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Button extends Component {
+class ListItems extends Component {
   render() {
     return (
-      <div className="button">
+      <div>
         {this.props.children}
       </div>
     );
-  }
-}
+  };
+};
 
-export default Button;
+export default ListItems;

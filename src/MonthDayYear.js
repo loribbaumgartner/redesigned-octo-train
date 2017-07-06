@@ -12,8 +12,8 @@ class MonthDayYear extends Component {
       <div className="month-day-year">
         <div className='day'>{dayOfMonth}</div>
         <div className='month-year-stack' >
-          <div className='month'>{month}</div>
-          <div className='year'>{year}</div>
+          <div>{month}</div>
+          <div>{year}</div>
         </div>
       </div>
     );

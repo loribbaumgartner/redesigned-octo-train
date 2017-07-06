@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListItems from './ListItems.js'
 
 class TodoForm extends Component {
   constructor(props) {
@@ -6,23 +7,39 @@ class TodoForm extends Component {
     this.state = {
       newTodo: '',
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = event => {
     this.setState({newTodo: event.target.value});
   }
 
+  handleSubmit = event => {
+    console.log('in handleSubmit')
+    event.preventDefault();
+  }
+
   render() {
-    console.log(this.state.newTodo);
     return (
-      <div className="form-input">
+      <form
+        onSubmit={this.handleSubmit}
+      >
         <input
           type='text'
           placeholder="Add an item"
           value={this.state.newTodo}
           onChange={this.handleChange}
         />
-      </div>
+      <ListItems className='list-items'>
+        <ul>
+          <li>Example item</li>
+          <li>Example item</li>
+          <li>Example item</li>
+        </ul>
+      </ListItems>
+      <input type='submit' className="button" value="+" />
+      </form>
     );
   };
 };
