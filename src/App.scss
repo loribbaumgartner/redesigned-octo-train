@@ -24,20 +24,28 @@ body, html {
 
 .date-block {
   background: $ltyellow;
-  height: $full;
+  height: $100;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: 100px 1fr;
 }
 
 .month-day-year {
-  padding-top: $half;
+  padding-top: $50;
+  width: $100;
 }
 
 .day {
+  // grid-column: 1;
+  // grid-row: 1;
   font-weight: 500;
   font-size: $font-size * 2;
+  align-text: left;
 }
 
 .month-year-stack {
-
+  // grid-column: 2;
+  // grid-row: 1;
 }
 
 .month {

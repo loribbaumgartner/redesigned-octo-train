@@ -19,14 +19,19 @@ body, html {
 
 .date-block {
   background: #F9E907;
-  height: 100px; }
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr; }
 
 .month-day-year {
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 100px; }
 
 .day {
   font-weight: 500;
-  font-size: 40px; }
+  font-size: 40px;
+  align-text: left; }
 
 .button {
   grid-column: 2;

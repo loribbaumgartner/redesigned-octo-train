@@ -8,7 +8,7 @@ class MonthDayYear extends Component {
     const year = today.getFullYear();
     return (
       <div className="month-day-year">
-        <span className='day'>{dayOfMonth}</span>
+        <div className='day'>{dayOfMonth}</div>
         <div className='month-year-stack' >
           <span className='month'>{month}</span>
           <span className='year'>{year}</span>
