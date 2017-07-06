@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button.js';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
           <p>
             Eventually this will be a list app.
           </p>
+          <Button>+</Button>
         </div>
       </div>
     );

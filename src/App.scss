@@ -1,26 +1,31 @@
+@import "./_shared.scss";
+
 body, html {
   text-align: center;
-  background-color: #D7DEDC;
-  font-family: "Raleway", sans-serif;
-  color: #50514F; }
+  background-color: $backgroundgray;
+  font-family: $font;
+  color: $dkgray;
+}
 
 .App {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 1fr;
-  grid-gap: 10px; }
+  grid-gap: 10px;
+}
 
 .list {
   grid-column: 2;
   grid-row: 2;
   height: 500px;
-  background-color: #FDFFF7;
+  background-color: $white;
   padding: 20px;
-  border-radius: 2px; }
+  border-radius: 2px;
+}
 
 .button {
-  background-color: #ACFCD9;
-  color: #55D6BE;
+  background-color: $ltmint;
+  color: $dkmint;
   font-weight: 100;
   font-size: 75px;
   height: 60px;
@@ -28,9 +33,11 @@ body, html {
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  line-height: 63px; }
+  line-height: 63px;
+}
 
 .button:hover {
   transform: translate(-2px, -2px);
   cursor: pointer;
-  background-color: #93fbce; }
+  background-color: darken($ltmint, 5%);
+}
