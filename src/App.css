@@ -16,10 +16,7 @@ body, html {
   height: 600px;
   width: 500px;
   background-color: #FDFFF7;
-  border-radius: 2px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto; }
+  border-radius: 2px; }
 
 .date-block {
   background: #F9E907;
@@ -53,6 +50,15 @@ body, html {
   grid-row: 1;
   font-weight: 400; }
 
+ul {
+  margin-left: 30px;
+  font-size: 20px; }
+
+li {
+  text-indent: -70%;
+  color: #6a6b68;
+  line-height: 30px; }
+
 input[type=text] {
   width: 80%;
   height: 30px;
@@ -67,7 +73,7 @@ input[type=text]::placeholder {
   color: #D7DEDC; }
 
 input[type=submit] {
-  margin-top: 25%;
+  margin-top: 55%;
   background-color: #ACFCD9;
   color: #55D6BE;
   font-weight: 100;
@@ -93,6 +99,11 @@ input[type=submit]:hover {
 @media (max-width: 445px) {
   body, html {
     background-color: #FDFFF7; }
+  ul {
+    margin-left: 20px;
+    font-size: 20px; }
+  li {
+    text-indent: -60%; }
   .list {
     grid-column: 1 / 4;
     grid-row: 1 / 10;

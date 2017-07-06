@@ -31,7 +31,7 @@ class TodoForm extends Component {
           value={this.state.newTodo}
           onChange={this.handleChange}
         />
-      <ListItems className='list-items'>
+      <ListItems>
         <ul>
           <li>Example item</li>
           <li>Example item</li>

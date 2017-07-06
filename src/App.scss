@@ -16,24 +16,18 @@ body, html {
 
 .list {
   grid-column: 2 / 3;
-  // grid-row: 2 / 3;
   margin-top: 10%;
   height: 600px;
   width: 500px;
   background-color: $white;
   border-radius: 2px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
 }
 
 .date-block {
-  // grid-row: 1 / 2;
   background: $ltyellow;
   height: $hundred;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: 100px 1fr;
 }
 
 .weekday {
@@ -68,12 +62,18 @@ body, html {
   font-weight: 400;
 }
 
-.list-items {
-  // grid-row: 3 / 4;
+ul {
+  margin-left: 30px;
+  font-size: $default-font-size;
+}
+
+li {
+  text-indent: -70%;
+  color: lighten($dkgray, 10%);
+  line-height: $default-font-size * 1.5;
 }
 
 input[type=text] {
-  // grid-row: 2 / 3;
   width: 80%;
   height: 30px;
   border: none;
@@ -89,8 +89,7 @@ input[type=text]::placeholder {
 }
 
 input[type=submit] {
-  // grid-row: 5 / 6;
-  margin-top: 25%;
+  margin-top: 55%;
   background-color: $ltmint;
   color: $dkmint;
   font-weight: 100;
@@ -121,6 +120,15 @@ input[type=submit]:hover {
   body, html {
     background-color: $white;
   }
+
+  ul {
+  margin-left: 20px;
+  font-size: $default-font-size;
+}
+
+li {
+  text-indent: -60%;
+}
 
   .list {
     grid-column: 1 / 4;
