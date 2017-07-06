@@ -25,27 +25,44 @@ body, html {
 .date-block {
   background: $ltyellow;
   height: $hundred;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: 100px 1fr;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px 1fr;
+}
+
+.weekday {
+  padding: 40px 0;
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-block;
+  font-weight: 400;
 }
 
 .month-day-year {
-  padding-top: $fifty;
-  width: $hundred;
+  padding: 27px 0;
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 30px);
+  grid-template-rows: 100px 1fr;
+  grid-gap: 5px;
+  padding-left: 38px;
 }
 
 .day {
-  // grid-column: 1;
-  // grid-row: 1;
-  font-weight: 500;
-  font-size: $default-font-size * 2;
-  align-text: left;
+  // padding: 20px 0;
+  line-height: 50px;
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 400;
+  font-size: $default-font-size * 3;
 }
 
 .month-year-stack {
-  // grid-column: 2;
-  // grid-row: 1;
+  // padding: 29px 0;
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: 400;
 }
 
 .month {
@@ -82,12 +99,7 @@ body, html {
 
 @media (max-width: 940px) {
   .list {
-    grid-column: 1 / 4;
-    grid-row: 2;
     min-width: 400px;
-    background-color: $white;
-    padding: 20px;
-    border-radius: 2px;
   }
 }
 
@@ -101,7 +113,6 @@ body, html {
     grid-row: 1 / 10;
     padding: 0px;
     border-radius: 2px;
-    border-radius: 0;
   }
 
   .button {

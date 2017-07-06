@@ -3,15 +3,17 @@ import React, { Component } from 'react';
 class MonthDayYear extends Component {
   render() {
     const today = this.props.date;
-    const month = today.getMonth() + 1;
-    const dayOfMonth = today.getDate();
-    const year = today.getFullYear();
+    const locale = "en-us"
+    const dayOfMonth = today.toLocaleString(locale, { day: "numeric" });
+    const month = today.toLocaleString(locale, { month: "short" });
+    const year = today.toLocaleString(locale, { year: "2-digit" });
+
     return (
       <div className="month-day-year">
         <div className='day'>{dayOfMonth}</div>
         <div className='month-year-stack' >
-          <span className='month'>{month}</span>
-          <span className='year'>{year}</span>
+          <div className='month'>{month}</div>
+          <div className='year'>{year}</div>
         </div>
       </div>
     );
