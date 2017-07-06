@@ -13,7 +13,8 @@ body, html {
 .list {
   grid-column: 2;
   grid-row: 2;
-  height: 500px;
+  height: 600px;
+  width: 500px;
   background-color: #FDFFF7;
   border-radius: 2px; }
 
@@ -29,7 +30,8 @@ body, html {
   grid-column: 2;
   grid-row: 1;
   display: inline-block;
-  font-weight: 400; }
+  font-weight: 400;
+  text-transform: uppercase; }
 
 .month-day-year {
   padding: 27px 0;
@@ -39,7 +41,7 @@ body, html {
   grid-template-columns: repeat(2, 30px);
   grid-template-rows: 100px 1fr;
   grid-gap: 5px;
-  padding-left: 38px; }
+  padding-left: 55px; }
 
 .day {
   line-height: 50px;
@@ -77,18 +79,28 @@ body, html {
 
 @media (max-width: 940px) {
   .list {
-    min-width: 400px; } }
+    width: 500px; } }
 
 @media (max-width: 445px) {
   body, html {
     background-color: #FDFFF7; }
   .list {
-    grid-column: 2;
+    grid-column: 1 / 4;
     grid-row: 1 / 10;
     padding: 0px;
-    border-radius: 2px; }
+    border-radius: 2px;
+    width: 100%; }
+  .date-block {
+    background: #F9E907;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr; }
+  .weekday {
+    display: none; }
+  .month-day-year {
+    grid-column: 2;
+    padding-left: 25%; }
   .button {
     grid-column: 2;
-    grid-row: 7;
-    margin-left: 45%;
-    margin-top: -32px; } }
+    grid-row: 7; } }

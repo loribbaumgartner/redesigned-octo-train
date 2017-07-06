@@ -17,7 +17,8 @@ body, html {
 .list {
   grid-column: 2;
   grid-row: 2;
-  height: 500px;
+  height: 600px;
+  width: 500px;
   background-color: $white;
   border-radius: 2px;
 }
@@ -36,6 +37,7 @@ body, html {
   grid-row: 1;
   display: inline-block;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .month-day-year {
@@ -46,11 +48,10 @@ body, html {
   grid-template-columns: repeat(2, 30px);
   grid-template-rows: 100px 1fr;
   grid-gap: 5px;
-  padding-left: 38px;
+  padding-left: 55px;
 }
 
 .day {
-  // padding: 20px 0;
   line-height: 50px;
   grid-column: 1;
   grid-row: 1;
@@ -59,7 +60,6 @@ body, html {
 }
 
 .month-year-stack {
-  // padding: 29px 0;
   grid-column: 2;
   grid-row: 1;
   font-weight: 400;
@@ -99,7 +99,7 @@ body, html {
 
 @media (max-width: 940px) {
   .list {
-    min-width: 400px;
+    width: 500px;
   }
 }
 
@@ -109,16 +109,32 @@ body, html {
   }
 
   .list {
-    grid-column: 2;
+    grid-column: 1 / 4;
     grid-row: 1 / 10;
     padding: 0px;
     border-radius: 2px;
+    width: 100%;
+  }
+
+  .date-block {
+    background: $ltyellow;
+    height: $hundred;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr;
+  }
+
+  .weekday {
+    display: none;
+  }
+
+  .month-day-year {
+    grid-column: 2;
+    padding-left: 25%;
   }
 
   .button {
     grid-column: 2;
     grid-row: 7;
-    margin-left: 45%;
-    margin-top: -32px;
   }
 }
