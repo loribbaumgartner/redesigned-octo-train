@@ -21,7 +21,6 @@ class TodoForm extends Component {
           placeholder="Add an item"
           value={this.state.newTodo}
           onChange={this.handleChange}
-          autoFocus={true}
         />
       </div>
     );

@@ -23,6 +23,21 @@ body, html {
   border-radius: 2px;
 }
 
+input {
+  min-width: 80%;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+  color: $dkgray;
+  font-size: $default-font-size;
+  border-bottom: 2px solid $ltyellow;
+}
+
+input::placeholder {
+  color: $backgroundgray;
+}
+
 .date-block {
   background: $ltyellow;
   height: $hundred;

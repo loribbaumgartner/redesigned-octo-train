@@ -18,6 +18,19 @@ body, html {
   background-color: #FDFFF7;
   border-radius: 2px; }
 
+input {
+  min-width: 80%;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+  color: #50514F;
+  font-size: 20px;
+  border-bottom: 2px solid #F9E907; }
+
+input::placeholder {
+  color: #D7DEDC; }
+
 .date-block {
   background: #F9E907;
   height: 100px;
