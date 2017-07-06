@@ -5,7 +5,7 @@ body, html {
   background-color: $backgroundgray;
   font-family: $font;
   color: $dkgray;
-  font-size: $font-size;
+  font-size: $default-font-size;
 }
 
 .App {
@@ -24,22 +24,22 @@ body, html {
 
 .date-block {
   background: $ltyellow;
-  height: $100;
+  height: $hundred;
   // display: grid;
   // grid-template-columns: repeat(2, 1fr);
   // grid-template-rows: 100px 1fr;
 }
 
 .month-day-year {
-  padding-top: $50;
-  width: $100;
+  padding-top: $fifty;
+  width: $hundred;
 }
 
 .day {
   // grid-column: 1;
   // grid-row: 1;
   font-weight: 500;
-  font-size: $font-size * 2;
+  font-size: $default-font-size * 2;
   align-text: left;
 }
 
