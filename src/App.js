@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button.js';
+import DateBlock from './DateBlock.js';
 import './App.css';
 
 class App extends Component {
@@ -7,12 +8,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className="list">
-          <h2>Resdesigned Octo Train</h2>
+          <DateBlock />
           <p>
             Eventually this will be a list app.
           </p>
-          <Button>+</Button>
         </div>
+        <Button>+</Button>
       </div>
     );
   }
