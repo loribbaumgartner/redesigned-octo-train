@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Weekday extends Component {
   getDayString(today) {
     const day = today.getDay();
+    // eslint-disable-next-line
     switch(day) {
         case 0:
           return 'Sunday'
