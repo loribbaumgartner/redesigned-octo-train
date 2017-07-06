@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Button from './Button.js';
 import DateBlock from './DateBlock.js';
+import TodoForm from './TodoForm.js';
+import Button from './Button.js';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <div className="list">
           <DateBlock />
+          <TodoForm />
           <p>
             Eventually this will be a list app.
           </p>
