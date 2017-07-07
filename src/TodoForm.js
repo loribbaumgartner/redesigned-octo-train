@@ -6,24 +6,35 @@ class TodoForm extends Component {
     super(props);
     this.state = {
       newTodo: '',
+      items: [],
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.addItem = this.addItem.bind(this);
   }
 
   handleChange = event => {
     this.setState({newTodo: event.target.value});
   }
 
-  handleSubmit = event => {
-    console.log('in handleSubmit')
+  addItem = event => {
+    var itemsArray = this.state.items;
+
+    itemsArray.push(
+      {
+        text: this.state.newTodo,
+        key: Date.now(),
+      }
+    );
+
+    this.setState({ items: itemsArray });
+    this.state.newTodo = '';
     event.preventDefault();
   }
 
   render() {
     return (
       <form
-        onSubmit={this.handleSubmit}
+        onSubmit={this.addItem}
       >
         <input
           type='text'
@@ -31,13 +42,7 @@ class TodoForm extends Component {
           value={this.state.newTodo}
           onChange={this.handleChange}
         />
-      <ListItems>
-        <ul>
-          <li>Example item</li>
-          <li>Example item</li>
-          <li>Example item</li>
-        </ul>
-      </ListItems>
+      <ListItems todoItems={this.state.items} />
       <input type='submit' className="button" value="+" />
       </form>
     );

@@ -51,13 +51,15 @@ body, html {
   font-weight: 400; }
 
 ul {
-  margin-left: 30px;
   font-size: 20px; }
 
 li {
-  text-indent: -70%;
   color: #6a6b68;
-  line-height: 30px; }
+  line-height: 30px;
+  text-align: left; }
+
+.list-items {
+  margin: 0 10%; }
 
 input[type=text] {
   width: 80%;
@@ -73,11 +75,12 @@ input[type=text]::placeholder {
   color: #D7DEDC; }
 
 input[type=submit] {
+  line-height: 0;
   margin-top: 55%;
   background-color: #ACFCD9;
   color: #55D6BE;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 50px;
   height: 60px;
   width: 60px;
   border-radius: 50%;
