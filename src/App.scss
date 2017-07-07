@@ -17,8 +17,8 @@ body, html {
 .list {
   grid-column: 2 / 3;
   margin-top: 10%;
-  height: 600px;
-  width: 500px;
+  height: $list-height;
+  width: $list-width;
   background-color: $white;
   border-radius: 2px;
 }
@@ -32,7 +32,6 @@ body, html {
 
 .weekday {
   padding: 40px 0;
-  // grid-column: 2;
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
@@ -40,7 +39,6 @@ body, html {
 
 .month-day-year {
   padding: 27px 0;
-  // grid-column: 1;
   display: grid;
   grid-template-columns: repeat(2, 30px);
   grid-template-rows: 100px 1fr;
@@ -93,7 +91,7 @@ input[type=text]::placeholder {
 
 input[type=submit] {
   line-height: 0;
-  margin-top: 55%;
+  margin-top: $list-height / 1.5;
   background-color: $ltmint;
   color: $dkmint;
   font-weight: 100;
