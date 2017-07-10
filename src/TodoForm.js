@@ -21,7 +21,7 @@ class TodoForm extends Component {
 
     itemsArray.push(
       {
-        content: '• ' + this.state.newTodo,
+        content: this.state.newTodo,
         id: Date.now(),
       }
     );
@@ -44,9 +44,8 @@ class TodoForm extends Component {
         <ScrollableList
           listItems={this.state.items}
           heightOfItem={30}
-          maxItemsToRender={12}
+          maxItemsToRender={16}
         />
-      <input type='submit' className="button" value="+" />
       </form>
     );
   };
