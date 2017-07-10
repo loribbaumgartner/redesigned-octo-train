@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItems from './ListItems.js'
+import ScrollableList from 'react-scrollable-list';
 
 class TodoForm extends Component {
   constructor(props) {
@@ -21,13 +21,12 @@ class TodoForm extends Component {
 
     itemsArray.push(
       {
-        text: this.state.newTodo,
-        key: Date.now(),
+        content: '• ' + this.state.newTodo,
+        id: Date.now(),
       }
     );
 
-    this.setState({ items: itemsArray });
-    this.state.newTodo = '';
+    this.setState({ items: itemsArray, newTodo: '' });
     event.preventDefault();
   }
 
@@ -42,7 +41,11 @@ class TodoForm extends Component {
           value={this.state.newTodo}
           onChange={this.handleChange}
         />
-      <ListItems todoItems={this.state.items} />
+        <ScrollableList
+          listItems={this.state.items}
+          heightOfItem={30}
+          maxItemsToRender={12}
+        />
       <input type='submit' className="button" value="+" />
       </form>
     );
